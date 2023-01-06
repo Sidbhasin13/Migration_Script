@@ -10,7 +10,7 @@ pipeline {
           branch 'main'
       }
       agent {
-          docker {
+          label docker {
               image 'python:3.11.1-alpine3.17' 
           }
       }
