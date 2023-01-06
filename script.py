@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env python
 import os
 import re
 import subprocess
