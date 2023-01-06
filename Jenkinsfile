@@ -1,7 +1,12 @@
 pipeline {
+//   agent {
+//         label 'docker'
+//     }
   agent {
-        label 'docker'
-    }
+          docker {
+              image 'python:2-alpine' 
+          }
+      }
   environment {
     BRANCH = "${BRANCH_NAME}"
   }
