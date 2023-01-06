@@ -1,5 +1,5 @@
 pipeline {
-  agent { docker { image 'python:3.11.1' } }
+  agent any
   environment {
     BRANCH = "${BRANCH_NAME}"
   }
