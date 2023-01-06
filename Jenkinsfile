@@ -9,7 +9,7 @@ pipeline {
           branch 'main'
       }
       steps{
-          sh 'script.py'
+          sh 'python script.py'
       }
     }
   }
