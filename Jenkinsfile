@@ -9,9 +9,7 @@ pipeline {
           branch 'main'
       }
       steps{
-          sh(script: """
-            script.py
-            """ 
+          sh 'script.py'
         )
       }
     }
