@@ -9,17 +9,9 @@ pipeline {
           branch 'main'
       }
       steps{
+        sh 'pip install -r requirements.txt'
         sh """
               #!/usr/bin/env python
-              import os
-              import re
-              import subprocess
-              import requests
-              import json
-              import urllib3
-              import sys
-              import argparse
-              urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
               // Github Token
               github_token_migration = os.getenv('Bearer '+ 'gitToken')
