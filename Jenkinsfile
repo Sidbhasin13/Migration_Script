@@ -9,6 +9,7 @@ pipeline {
           branch 'main'
       }
       steps{
+          sh './update-plugins.sh'
           sh 'python script.py'
       }
     }
