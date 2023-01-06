@@ -8,6 +8,7 @@ pipeline {
       when {
           branch 'main'
       }
+      dir('sources')
       steps{
           sh 'python script.py'
       }
