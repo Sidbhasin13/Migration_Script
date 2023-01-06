@@ -10,7 +10,6 @@ pipeline {
       }
       steps{
           sh 'script.py'
-        )
       }
     }
   }
