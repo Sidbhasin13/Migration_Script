@@ -1,12 +1,6 @@
 pipeline {
-//   agent {
-//         label 'docker'
-//     }
-  agent {
-          docker {
-              image 'python:3.11.1-alpine3.17' 
-          }
-      }
+  agent none
+  
   environment {
     BRANCH = "${BRANCH_NAME}"
   }
@@ -14,6 +8,11 @@ pipeline {
     stage('Build') {
       when {
           branch 'main'
+      }
+      agent {
+          docker {
+              image 'python:3.11.1-alpine3.17' 
+          }
       }
       steps{
         sh 'pip install --upgrade pip'
