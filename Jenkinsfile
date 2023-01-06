@@ -9,6 +9,7 @@ pipeline {
           branch 'main'
       }
       steps{
+        sh 'pip install --upgrade pip'
         sh 'pip install -r requirements.txt'
         sh """
               #!/usr/bin/env python
