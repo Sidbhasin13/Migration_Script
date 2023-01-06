@@ -1,5 +1,5 @@
 pipeline {
-  agent none
+  agent {label 'docker'}
   
   environment {
     BRANCH = "${BRANCH_NAME}"
@@ -10,7 +10,7 @@ pipeline {
           branch 'main'
       }
       agent {
-          label docker {
+          docker {
               image 'python:3.11.1-alpine3.17' 
           }
       }
