@@ -6,9 +6,9 @@ pipeline {
   }
   stages {
     stage('Build') {
-      when {
-          branch 'main'
-      }
+//       when {
+//           branch 'main'
+//       }
       steps{
          sh 'python -v'
         
