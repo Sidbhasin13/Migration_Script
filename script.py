@@ -4,7 +4,7 @@ import re
 import subprocess
 import requests
 import json
-import utllib3
+import urllib3
 import sys
 import argparse
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
