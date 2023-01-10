@@ -1,11 +1,11 @@
 pipeline {
-//   agent any
-  agent {
-        docker{
-            image'python:alpine3.17'
-//             args '-v /root/.m2:/root/.m2'
-        }
-    }      
+  agent any
+//   agent {
+//         docker{
+//             image'python:alpine3.17'
+// //             args '-v /root/.m2:/root/.m2'
+//         }
+//     }      
   environment {
     BRANCH = "${BRANCH_NAME}"
   }
@@ -15,7 +15,7 @@ pipeline {
 //           branch 'main'
 //       }
       steps{
-         sh 'python -v'
+         sh 'python3 -v'
         
 //         sh(script: """
 //               import os
