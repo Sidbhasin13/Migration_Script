@@ -1,5 +1,5 @@
 pipeline {
-  agent {label 'docker'}
+  agent any
   
   environment {
     BRANCH = "${BRANCH_NAME}"
@@ -9,16 +9,17 @@ pipeline {
       when {
           branch 'main'
       }
-      agent {
-          docker {
-              image 'python:3.11.1-alpine3.17' 
-          }
-      }
       steps{
-        sh 'pip install --upgrade pip'
-        sh 'pip install -r requirements.txt'
-        sh """
-              #!/usr/bin/env python
+        sh(script: """
+              import os
+              import re
+              import subprocess
+              import requests
+              import json
+              import utllib3
+              import sys
+              import argparse
+              urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
               // Github Token
               github_token_migration = os.getenv('Bearer '+ 'gitToken')
@@ -77,8 +78,8 @@ pipeline {
               repository = repos
 
               print("**** Repos ****", repository)
-
             """ 
+        )
       }
     }
   }
