@@ -10,7 +10,7 @@ import argparse
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 // Github Token
-github_token_migration = os.getenv('Bearer '+ 'gitToken')
+github_token_migration = os.getenv('Bearer '+ 'GitHub')
 
 // ArgParser Section
 parser.add_argument("--user", "-u1", help="User Name")
