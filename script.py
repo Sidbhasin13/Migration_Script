@@ -9,10 +9,10 @@ import sys
 import argparse
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-// Github Token
+# Github Token
 github_token_migration = os.getenv('Bearer '+ 'GitHub')
 
-// ArgParser Section
+# ArgParser Section
 parser.add_argument("--user", "-u1", help="User Name")
 parser.add_argument("--password", "-p1", help="Password")
 parser.add_argument("--Github_Repo_Name", "gb", help="Github Repository Name")
@@ -28,7 +28,7 @@ if (args.Github_Repo_Name):
 if (args.Gitlab_Project_Id):
     gl_project_id = args.Gitlab_Project_Id
     
-// Collecting Username and Password Variables
+# Collecting Username and Password Variables
 gitlab_username = gitlab_user_name
 gitlab_password = gitlab_user_pass
 github_reponame = github_repo_name
