@@ -15,7 +15,7 @@ pipeline {
 //           branch 'main'
 //       }
       steps{
-         sh 'python --version'
+         sh 'python3 --version'
         
 //         sh(script: """
 //               import os
