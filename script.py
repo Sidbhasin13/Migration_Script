@@ -16,8 +16,8 @@ github_token_migration = os.getenv('Bearer '+ 'GitHub')
 parser = argparse.ArgumentParser()
 parser.add_argument("--user", "-u1", help="User Name")
 parser.add_argument("--password", "-p1", help="Password")
-parser.add_argument("--Github_Repo_Name", "gb", help="Github Repository Name")
-parser.add_argument("--Gitlab_Project_Id", "gl", help="Gitlab Project ID")
+parser.add_argument("--Github_Repo_Name", "-gb", help="Github Repository Name")
+parser.add_argument("--Gitlab_Project_Id", "-gl", help="Gitlab Project ID")
 
 args = parser.parse_args()
 if (args.user):
