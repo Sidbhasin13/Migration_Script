@@ -13,10 +13,10 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 github_token_migration = os.getenv('Bearer '+ 'GitHub')
 
 # ArgParser Section
-parser.add_argument("--user", "-u1", help="User Name")
-parser.add_argument("--password", "-p1", help="Password")
-parser.add_argument("--Github_Repo_Name", "gb", help="Github Repository Name")
-parser.add_argument("--Gitlab_Project_Id", "gl", help="Gitlab Project ID")
+parser = argparse.add_argument("--user", "-u1", help="User Name")
+parser = argparse.add_argument("--password", "-p1", help="Password")
+parser = argparse.add_argument("--Github_Repo_Name", "gb", help="Github Repository Name")
+parser = argparse.add_argument("--Gitlab_Project_Id", "gl", help="Gitlab Project ID")
 
 args = parser.parse_args()
 if (args.user):
