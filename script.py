@@ -10,7 +10,7 @@ import argparse
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # Github Token
-github_token_migration = 'Bearer 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'
+github_token_migration = 'Bearer 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'
 
 # ArgParser Section
 # parser = argparse.ArgumentParser()
