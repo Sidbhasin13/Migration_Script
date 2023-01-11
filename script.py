@@ -28,14 +28,24 @@ args = parser.parse_args()
 
 print("***** Arg User *****", args.user)
 
-if args.user:
-    gitlab_user_name = args.user
-if args.password:
-    gitlab_user_pass = args.password
-if args.Github_Repo_Name:
-    github_repo_name = args.Github_Repo_Name
-if args.Gitlab_Project_Id:
-    gl_project_id = args.Gitlab_Project_Id
+# if args.user:
+#     gitlab_user_name = args.user
+# if args.password:
+#     gitlab_user_pass = args.password
+# if args.Github_Repo_Name:
+#     github_repo_name = args.Github_Repo_Name
+# if args.Gitlab_Project_Id:
+#     gl_project_id = args.Gitlab_Project_Id
+
+
+
+gitlab_user_name = args.get("user", "Sidbhasin13")
+
+gitlab_user_pass = args.password
+
+github_repo_name = args.Github_Repo_Name
+
+gl_project_id = args.Gitlab_Project_Id
 
 print("***** Gitlab Data *****", gitlab_user_name, gitlab_user_pass, github_repo_name, gl_project_id )
 
