@@ -26,7 +26,6 @@ args = parser.parse_args()
 # github_repo_name = ''
 # gl_project_id = ''
 
-print("***** Arg User *****", args.user)
 
 # if args.user:
 #     gitlab_user_name = args.user
@@ -40,6 +39,7 @@ print("***** Arg User *****", args.user)
 
 
 gitlab_user_name = args.get("user", "Sidbhasin13")
+print("***** Arg User *****", gitlab_user_name)
 
 gitlab_user_pass = args.password
 
