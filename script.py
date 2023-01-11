@@ -70,9 +70,13 @@ def list_repos():
     page = 1
     while True:
         params = {"page": page, "per_page": 10, "bearer_token": github_token_migration}
+        print("----- Params -----", params)
         url = os.path.join('https://api.github.com/users/Sidbhasin13/repos')
+        print("---- URL ----", url)
         res = requests.get('url', parms=params, verify=False)
-        groups += res.json
+        print("+++++ Response +++++", res)
+        repos += res.json
+        print("== Repos ==", repos)
         if "x-total-pages" in res.headers:
             if page >= int(res.headers["x-total-pages"]):
                 break
