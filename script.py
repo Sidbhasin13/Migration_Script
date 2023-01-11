@@ -10,7 +10,7 @@ import argparse
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # Github Token
-github_token_migration = 'Bearer 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'
+# github_token_migration = 'Bearer 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'
 
 # ArgParser Section
 # parser = argparse.ArgumentParser()
@@ -71,7 +71,7 @@ def list_repos():
     repos = []
     page = 1
     while True:
-        params = {"page": page, "per_page": 10, "bearer_token": github_token_migration}
+        params = {"page": page, "per_page": 10, headers = {'Authorization': 'Bearer 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'}}
         print("----- Params -----", params)
         url = 'https://api.github.com/users/Sidbhasin13/repos'
         print("---- URL ----", url)
