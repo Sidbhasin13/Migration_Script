@@ -70,7 +70,7 @@ print('***** ????? *****', repoDirectory)
 def list_repos():
     repos = []
     page = 1
-    headers = {'Authorization': 'Bearer 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'}
+    headers = {'Authorization': 'Bearer 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'}
     while True:
 #         params = {"page": page, "per_page": 10, headers = {'Authorization': 'Bearer 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'}}
 #         print("----- Params -----", params)
