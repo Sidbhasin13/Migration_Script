@@ -20,12 +20,6 @@ parser.add_argument("--Github_Repo_Name", "-gb", help="Github Repository Name")
 parser.add_argument("--Gitlab_Project_Id", "-gl", help="Gitlab Project ID")
 args = parser.parse_args()
 
-# Variables
-# gitlab_user_name = ''
-# gitlab_user_pass = ''
-# github_repo_name = ''
-# gl_project_id = ''
-
 
 # if args.user:
 #     gitlab_user_name = args.user
@@ -41,11 +35,14 @@ args = parser.parse_args()
 gitlab_user_name = "Sidbhasin13"
 print("***** Arg User *****", gitlab_user_name)
 
-gitlab_user_pass = args.password
+gitlab_user_pass = "Sidbhasinnewdelhi@0786"
+print("***** Arg Password *****", gitlab_user_pass)
 
-github_repo_name = args.Github_Repo_Name
+github_repo_name = "Migration_Script"
+print("***** Arg GitHub Password *****", github_repo_name)
 
-gl_project_id = args.Gitlab_Project_Id
+gl_project_id = "42235831"
+print("***** Arg Gitlab Project ID *****", gl_project_id)
 
 print("***** Gitlab Data *****", gitlab_user_name, gitlab_user_pass, github_repo_name, gl_project_id )
 
