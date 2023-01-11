@@ -65,7 +65,7 @@ repoDirectory = os.environ['WORKSPACE']
 
 print('***** ????? *****', repoDirectory)
 
-print('**** github token is *****', github_token_migration)
+# print('**** github token is *****', github_token_migration)
 
 def list_repos():
     repos = []
