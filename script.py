@@ -13,12 +13,12 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 github_token_migration = 'Bearer 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'
 
 # ArgParser Section
-parser = argparse.ArgumentParser()
-parser.add_argument("--user", "-u1", help="User Name")
-parser.add_argument("--password", "-p1", help="Password")
-parser.add_argument("--Github_Repo_Name", "-gb", help="Github Repository Name")
-parser.add_argument("--Gitlab_Project_Id", "-gl", help="Gitlab Project ID")
-args = parser.parse_args()
+# parser = argparse.ArgumentParser()
+# parser.add_argument("--user", "-u1", help="User Name")
+# parser.add_argument("--password", "-p1", help="Password")
+# parser.add_argument("--Github_Repo_Name", "-gb", help="Github Repository Name")
+# parser.add_argument("--Gitlab_Project_Id", "-gl", help="Gitlab Project ID")
+# args = parser.parse_args()
 
 
 # if args.user:
@@ -55,6 +55,8 @@ gitlab_projectid = gl_project_id
 gitlab = requests.Session()
 gitlab.auth = (gitlab_username, gitlab_password)
 
+print("____ Gitlab Auth ____", gitlab.auth)
+
 gitlabUrl = 'https://gitlab.com/'
 
 print('***** Gitlab Url is *****', gitlabUrl)
@@ -71,7 +73,7 @@ def list_repos():
     while True:
         params = {"page": page, "per_page": 10, "bearer_token": github_token_migration}
         print("----- Params -----", params)
-        url = os.path.join('https://api.github.com/users/Sidbhasin13/repos')
+        url = 'https://api.github.com/users/Sidbhasin13/repos'
         print("---- URL ----", url)
         res = requests.get('url', params=params, verify=False)
         print("+++++ Response +++++", res)
