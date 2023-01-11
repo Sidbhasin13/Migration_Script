@@ -75,7 +75,7 @@ def list_repos():
         print("----- Params -----", params)
         url = 'https://api.github.com/users/Sidbhasin13/repos'
         print("---- URL ----", url)
-        res = requests.get('url', params=params, verify=False)
+        requests.request("GET", 'url', params=params, verify=False)
         print("+++++ Response +++++", res)
         repos += res.json
         print("== Repos ==", repos)
