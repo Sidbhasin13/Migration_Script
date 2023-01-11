@@ -70,12 +70,13 @@ print('**** github token is *****', github_token_migration)
 def list_repos():
     repos = []
     page = 1
+    headers = {'Authorization': 'Bearer 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'}
     while True:
-        params = {"page": page, "per_page": 10, headers = {'Authorization': 'Bearer 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'}}
-        print("----- Params -----", params)
+#         params = {"page": page, "per_page": 10, headers = {'Authorization': 'Bearer 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'}}
+#         print("----- Params -----", params)
         url = 'https://api.github.com/users/Sidbhasin13/repos'
         print("---- URL ----", url)
-        res = requests.request("GET", url, params=params, verify=False)
+        res = requests.request("GET", url, headers=headers, verify=False)
         print("+++++ Response +++++", res)
         repos += res.json
         print("== Repos ==", repos)
