@@ -38,7 +38,7 @@ args = parser.parse_args()
 
 
 
-gitlab_user_name = args.get("user", "Sidbhasin13")
+gitlab_user_name = "Sidbhasin13"
 print("***** Arg User *****", gitlab_user_name)
 
 gitlab_user_pass = args.password
