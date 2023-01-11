@@ -20,6 +20,13 @@ parser.add_argument("--Github_Repo_Name", "-gb", help="Github Repository Name")
 parser.add_argument("--Gitlab_Project_Id", "-gl", help="Gitlab Project ID")
 args = parser.parse_args()
 
+# Variables
+gitlab_user_name = ''
+gitlab_user_pass = ''
+github_repo_name = ''
+gl_project_id = ''
+
+
 if args.user:
     gitlab_user_name = args.user
 if args.password:
