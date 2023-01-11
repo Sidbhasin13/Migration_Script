@@ -85,7 +85,7 @@ def list_repos():
             break
     return repos
     
-repository = repos
+repository = list_repos()
 
 print("**** Repos ****", repository)
 
