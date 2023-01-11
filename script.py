@@ -70,7 +70,7 @@ print('***** ????? *****', repoDirectory)
 def list_repos():
     repos = []
     page = 1
-    headers = {'Authorization': 'Bearer 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'}
+    headers = {'Authorization': 'Bearer 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'}
     while True:
 #         params = {"page": page, "per_page": 10, headers = {'Authorization': 'Bearer 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'}}
 #         print("----- Params -----", params)
@@ -78,7 +78,7 @@ def list_repos():
         print("---- URL ----", url)
         res = requests.request("GET", url, headers=headers, verify=False)
         print("+++++ Response +++++", res)
-        repos += res.json
+        repos += res.json()
         print("== Repos ==", repos)
         if "x-total-pages" in res.headers:
             if page >= int(res.headers["x-total-pages"]):
