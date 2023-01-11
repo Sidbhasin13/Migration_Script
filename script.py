@@ -28,12 +28,14 @@ if args.Github_Repo_Name:
     github_repo_name = args.Github_Repo_Name
 if args.Gitlab_Project_Id:
     gl_project_id = args.Gitlab_Project_Id
-    
+
+print("***** Gitlab Data *****", gitlab_user_name, gitlab_user_pass, github_repo_name, gl_project_id )
+
 # Collecting Username and Password Variables
-gitlab_username == gitlab_user_name
-gitlab_password == gitlab_user_pass
-github_reponame == github_repo_name
-gitlab_projectid == gl_project_id
+gitlab_username = gitlab_user_name
+gitlab_password = gitlab_user_pass
+github_reponame = github_repo_name
+gitlab_projectid = gl_project_id
 
 gitlab = requests.Session()
 gitlab.auth = (gitlab_username, gitlab_password)
