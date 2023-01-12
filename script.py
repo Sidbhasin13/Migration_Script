@@ -75,11 +75,12 @@ def list_repos():
     while True:
 #         params = {"page": page, "per_page": 10, headers = {'Authorization': 'Bearer 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'}}
 #         print("----- Params -----", params)
-        url = 'https://api.github.com/users/Sidbhasin13/repos'
+        url = 'https://api.github.com/users/Sidbhasin13/repos?'
         print("---- URL ----", url)
         res = requests.request("GET", url, auth=HTTPBasicAuth('Sidbhasin13', '@$ID&bHA786'), verify=False)
         print("+++++ Response +++++", res)
         repos += res.json()
+        repos.extend(i['full_name'] for i in res.json())
         print(*repos, sep = "\n")
         if "x-total-pages" in res.headers:
             if page >= int(res.headers["x-total-pages"]):
