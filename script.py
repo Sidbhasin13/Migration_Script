@@ -7,6 +7,7 @@ import json
 import urllib3
 import sys
 import argparse
+from requests.auth import HTTPBasicAuth
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # Github Token
