@@ -80,12 +80,12 @@ def list_repos():
         print("+++++ Response +++++", res)
         repos += res.json()
         print(*repos, sep = "\n")
-#         if "x-total-pages" in res.headers:
-#             if page >= int(res.headers["x-total-pages"]):
-#                 break
-#             page +=1
-#         else:
-#             break
+        if "x-total-pages" in res.headers:
+            if page >= int(res.headers["x-total-pages"]):
+                break
+            page +=1
+        else:
+            break
     return repos
     
 repository = list_repos()
