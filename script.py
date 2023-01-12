@@ -79,7 +79,7 @@ def list_repos():
         res = requests.request("GET", url, headers=headers, verify=False)
         print("+++++ Response +++++", res)
         repos += res.json()
-        print(*repos[0], sep = "\n")
+        print(*repos, sep = "\n")
         if "x-total-pages" in res.headers:
             if page >= int(res.headers["x-total-pages"]):
                 break
